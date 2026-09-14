@@ -1,9 +1,0 @@
-services:
-  worker:
-    build: .
-    restart: unless-stopped
-    env_file: .env
-    environment:
-      WORKER_ID: ${WORKER_ID:-local-pc}
-    tmpfs:
-      - /tmp:size=2g
